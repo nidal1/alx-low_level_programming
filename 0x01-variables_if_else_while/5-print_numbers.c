@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - print from one to ten
+ * main - print digits of base ten
  *
  * Return: zero
  */
