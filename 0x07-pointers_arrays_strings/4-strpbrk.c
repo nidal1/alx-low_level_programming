@@ -3,12 +3,9 @@
 
 /**
  * _strpbrk - bytes
- * 
- * @s: Pointer char
- * 
- * @accept: Pointer char
- * 
- * Return: a pointer to the byte in s that matches one of the bytes in accept, or NULL if no such byte is found
+ * @s: pointer to char
+ * @accept: pointer to char
+ * Return: NULL
  */
 char *_strpbrk(char *s, char *accept)
 {
