@@ -5,7 +5,7 @@
  * 
  * @a: Pointer char
  * 
- * Returns: void
+ * Return: void
  */
 void print_chessboard(char (*a)[8])
 {
