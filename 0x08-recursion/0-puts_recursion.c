@@ -2,9 +2,9 @@
 
 void printChar(char *s)
 {
-    if (!*s)
+    if(!*s)
         return;
-    _putchar(*s); 
+    _putchar(*s);
     s++;
     printChar(s);
 }
