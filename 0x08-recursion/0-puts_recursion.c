@@ -2,7 +2,13 @@
 
 void printChar(char *s)
 {
+    if (!*s)
+    {
+        return;
+    }
     _putchar(*s); 
+    s++;
+    printChar(s);
 }
 /**
  * _puts_recursion - a function that prints a string, followed by a new line
@@ -11,10 +17,6 @@ void printChar(char *s)
  */
 void _puts_recursion(char *s)
 {
-    if (*s)
-    {
-        printChar(s);
-        s++;
-    }
+    printChar(s);
     _putchar('\n');
 }
