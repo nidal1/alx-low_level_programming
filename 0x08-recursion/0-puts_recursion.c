@@ -3,17 +3,17 @@
 /**
  * _puts_recursion - a function that prints a string, followed by a new line
  * @s: the string to be printed
+ *
  * Return: void
  */
 void _puts_recursion(char *s)
 {
-    if (!*s)
-    {
-        _putchar('\n');
-        return;
-    }
-    _putchar(*s);
-    s++;
-    _puts_recursion(s);
-    
+	if (!*s)
+	{
+		_putchar('\n');
+		return;
+	}
+	_putchar(*s);
+	s++;
+	_puts_recursion(s);
 }
