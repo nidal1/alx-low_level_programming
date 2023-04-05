@@ -1,13 +1,5 @@
 #include "main.h"
 
-void printChar(char *s)
-{
-    if(!*s)
-        return;
-    _putchar(*s);
-    s++;
-    printChar(s);
-}
 /**
  * _puts_recursion - a function that prints a string, followed by a new line
  * @s: the string to be printed
@@ -15,6 +7,13 @@ void printChar(char *s)
  */
 void _puts_recursion(char *s)
 {
-    printChar(s);
-    _putchar('\n');
+    if (!*s)
+    {
+        _putchar('\n');
+        return;
+    }
+    _putchar(*s);
+    s++;
+    _puts_recursion(s);
+    
 }
