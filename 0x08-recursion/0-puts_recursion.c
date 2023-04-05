@@ -3,16 +3,14 @@
 void printChar(char *s)
 {
     if (!*s)
-    {
         return;
-    }
     _putchar(*s); 
     s++;
     printChar(s);
 }
 /**
  * _puts_recursion - a function that prints a string, followed by a new line
- *
+ * @s: the string to be printed
  * Return: void
  */
 void _puts_recursion(char *s)
