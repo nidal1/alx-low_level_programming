@@ -10,9 +10,10 @@ size_t print_listint(const listint_t *h)
 {
     size_t count = 0;
     
-    listint_t *nodePtr = h;
+    listint_t *nodePtr = NULL;
+    nodePtr = h;
     while (nodePtr){
-        rpintf("%d\n", nodePtr->n);
+        printf("%d\n", nodePtr->n);
         count++;
         nodePtr = nodePtr->next;
     }
