@@ -1,5 +1,11 @@
 #include "lists.h"
 
+/**
+ * struct print_listint - print integer of each node in the list
+ * @h: struct listint_t
+ *
+ * Return: long unsigned integer counter
+ */
 size_t print_listint(const listint_t *h)
 {
     size_t count = 0;
