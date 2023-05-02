@@ -1,22 +1,29 @@
 #include "lists.h"
 
 /**
- * struct print_listint - print integer of each node in the list
- * @h: pointer to head struct listint_t
+ * print_listint_safe - prints a linked list, safely
+ * @head: list of type listint_t to print
  *
- * Return: long unsigned integer counter
+ * Return: number of nodes in the list
  */
-size_t print_listint(const listint_t *h)
+size_t print_listint_safe(const listint_t *head)
 {
-    size_t count = 0;
-    
-    listint_t *nodePtr = NULL;
-    nodePtr = h;
-    while (nodePtr){
-        printf("%d\n", nodePtr->n);
-        count++;
-        nodePtr = nodePtr->next;
-    }
+	size_t num = 0;
+	long int diff;
 
-    return count;
+	while (head)
+	{
+		diff = head - head->next;
+		num++;
+		printf("[%p] %d\n", (void *)head, head->n);
+		if (diff > 0)
+			head = head->next;
+		else
+		{
+			printf("-> [%p] %d\n", (void *)head->next, head->next->n);
+			break;
+		}
+	}
+
+	return (num);
 }
