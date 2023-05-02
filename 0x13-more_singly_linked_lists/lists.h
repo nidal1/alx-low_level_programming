@@ -1,6 +1,3 @@
-#ifndef _LISTS_
-#define _LISTS_
-
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -21,4 +18,3 @@ typedef struct listint_s
 /* ****************** Functions ****************** */
 size_t print_listint(const listint_t *h);
 
-#endif
